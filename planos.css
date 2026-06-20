@@ -1,0 +1,838 @@
+/* =========================
+   PLANOS | AJUSTES DA PÁGINA
+   O visual global vem do style.css
+========================= */
+
+/* =========================
+   HERO
+========================= */
+.plans-hero {
+  min-height: 100vh;
+  padding: 120px 8% 80px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(rgba(8, 8, 8, 0.68), rgba(8, 8, 8, 0.96)),
+    url("img/gym4.webp") center/cover no-repeat;
+}
+
+.plans-hero::before,
+.plans-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.plans-hero::before {
+  background:
+    radial-gradient(circle at 25% 30%, rgba(255, 122, 0, 0.22), transparent 35%),
+    radial-gradient(circle at 80% 72%, rgba(255, 69, 0, 0.14), transparent 35%);
+}
+
+.plans-hero::after {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+
+  background-size: 48px 48px;
+  opacity: 0.35;
+}
+
+.plans-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 950px;
+  text-align: center;
+
+  animation: heroEntrance 1s var(--transition) both;
+}
+
+.plans-hero-content span {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  text-shadow: 0 0 20px rgba(255, 122, 0, 0.7);
+}
+
+.plans-hero-content h1 {
+  margin-bottom: 24px;
+
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(46px, 6.6vw, 78px);
+  line-height: 0.95;
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 8px 50px rgba(0, 0, 0, 0.8),
+    0 0 55px rgba(255, 122, 0, 0.22);
+}
+
+.plans-hero-content h1 strong {
+  color: var(--orange);
+  font-weight: inherit;
+
+  text-shadow:
+    0 0 28px rgba(255, 122, 0, 0.8),
+    0 0 60px rgba(255, 122, 0, 0.35);
+}
+
+.plans-hero-content p {
+  max-width: 720px;
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.plans-hero-buttons {
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.plans-hero-buttons .start-btn,
+.plans-hero-buttons .outline-btn {
+  width: 260px;
+  height: 68px;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50px;
+  text-decoration: none !important;
+
+  animation: serviceButtonEntrance 0.9s var(--transition) both;
+}
+
+/* Botão secundário */
+.outline-btn {
+  border: 2px solid var(--orange);
+
+  background: rgba(8, 8, 8, 0.35);
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 20px rgba(255, 122, 0, 0.2),
+    inset 0 0 20px rgba(255, 122, 0, 0.05);
+
+  transition:
+    transform 0.3s var(--transition),
+    box-shadow 0.3s var(--transition),
+    background 0.3s var(--transition),
+    border-color 0.3s var(--transition);
+}
+
+.plans-hero-buttons .start-btn:hover,
+.plans-hero-buttons .outline-btn:hover {
+  transform: translateY(-4px);
+  border-color: transparent;
+
+  background: linear-gradient(135deg, var(--orange), var(--orange-hot));
+  color: #fff;
+
+  box-shadow:
+    0 8px 40px rgba(255, 122, 0, 0.5),
+    0 0 60px rgba(255, 122, 0, 0.2);
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+.plans-intro,
+.plans-options,
+.plans-comparison,
+.plans-benefits,
+.plans-faq,
+.plans-final-cta {
+  position: relative;
+  padding: 110px 8%;
+  overflow: hidden;
+}
+
+.plans-intro,
+.plans-benefits,
+.plans-final-cta {
+  background:
+    radial-gradient(circle at top left, rgba(255, 122, 0, 0.08), transparent 35%),
+    linear-gradient(180deg, var(--black), #0c0c0c);
+}
+
+.plans-options,
+.plans-comparison,
+.plans-faq {
+  background:
+    radial-gradient(circle at bottom right, rgba(255, 69, 0, 0.07), transparent 35%),
+    linear-gradient(180deg, #0c0c0c, var(--black));
+}
+
+/* =========================
+   CARDS DE PREÇO
+========================= */
+.pricing-container {
+  max-width: 1180px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+  perspective: 1200px;
+}
+
+.pricing-card {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 620px;
+  padding: 42px 32px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+
+  display: flex;
+  flex-direction: column;
+
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.024)),
+    var(--surface-2);
+
+  box-shadow: var(--shadow-card);
+
+  transition:
+    transform 0.42s var(--transition),
+    box-shadow 0.42s var(--transition),
+    border-color 0.42s var(--transition);
+}
+
+.pricing-card::before {
+  content: '';
+  position: absolute;
+  inset: -60%;
+
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(255, 122, 0, 0.08),
+    transparent,
+    rgba(255, 255, 255, 0.035),
+    transparent
+  );
+
+  animation: spinGlow 9s linear infinite;
+  pointer-events: none;
+}
+
+.pricing-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(circle at top, rgba(255, 122, 0, 0.12), transparent 58%);
+  opacity: 0;
+
+  transition: opacity 0.4s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-14px) rotateX(3deg);
+  border-color: rgba(255, 122, 0, 0.34);
+  box-shadow:
+    0 32px 85px rgba(0, 0, 0, 0.72),
+    0 0 45px rgba(255, 122, 0, 0.16);
+}
+
+.pricing-card:hover::after {
+  opacity: 1;
+}
+
+.pricing-card.featured {
+  transform: scale(1.04);
+
+  border-color: rgba(255, 122, 0, 0.8);
+
+  background:
+    linear-gradient(160deg, rgba(255, 122, 0, 0.12), rgba(255, 255, 255, 0.035)),
+    var(--surface-2);
+
+  box-shadow:
+    0 0 46px rgba(255, 122, 0, 0.18),
+    var(--shadow-card);
+}
+
+.pricing-card.featured:hover {
+  transform: translateY(-14px) scale(1.04);
+}
+
+.pricing-top,
+.pricing-price,
+.pricing-list,
+.pricing-card button {
+  position: relative;
+  z-index: 3;
+}
+
+.popular-tag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 4;
+
+  padding: 7px 13px;
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, var(--orange), var(--orange-hot));
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+
+  box-shadow: 0 0 22px rgba(255, 122, 0, 0.35);
+}
+
+.plan-badge {
+  display: inline-block;
+
+  margin-bottom: 18px;
+  padding: 7px 13px;
+  border-radius: 50px;
+
+  background: rgba(255, 122, 0, 0.12);
+  border: 1px solid rgba(255, 122, 0, 0.22);
+  color: var(--orange);
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.pricing-card h3 {
+  margin-bottom: 14px;
+
+  color: #fff;
+  font-size: 32px;
+}
+
+.pricing-card p {
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.7;
+}
+
+.pricing-price {
+  margin: 34px 0 30px;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+
+  white-space: nowrap;
+}
+
+.pricing-price span {
+  margin-bottom: 8px;
+
+  color: var(--orange);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.pricing-price strong {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 68px;
+  line-height: 0.9;
+  letter-spacing: 1px;
+
+  background: linear-gradient(135deg, var(--orange), var(--orange-glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  filter: drop-shadow(0 0 22px rgba(255, 122, 0, 0.28));
+}
+
+.pricing-price small {
+  margin-bottom: 8px;
+
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 15px;
+}
+
+.pricing-list {
+  margin-bottom: 34px;
+
+  display: grid;
+  gap: 14px;
+
+  list-style: none;
+}
+
+.pricing-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: rgba(255, 255, 255, 0.74);
+}
+
+.pricing-list li::before {
+  content: "✓";
+
+  width: 23px;
+  height: 23px;
+  min-width: 23px;
+  border-radius: 50%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 122, 0, 0.14);
+  color: var(--orange);
+
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.more-benefits {
+  color: var(--orange) !important;
+  font-weight: 900;
+}
+
+.more-benefits::before {
+  content: "+";
+  background: rgba(255, 122, 0, 0.18);
+  color: var(--orange);
+}
+
+.pricing-card button {
+  width: 100%;
+  height: 54px;
+  margin-top: auto;
+
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+
+  transition:
+    transform 0.3s var(--transition),
+    box-shadow 0.3s var(--transition),
+    background 0.3s var(--transition);
+}
+
+.pricing-card button:hover,
+.pricing-card.featured button {
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--orange), var(--orange-hot));
+  box-shadow: 0 14px 34px rgba(255, 122, 0, 0.38);
+}
+
+.pricing-card button:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================
+   COMPARAÇÃO
+========================= */
+.comparison-table {
+  max-width: 1050px;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+
+  box-shadow: var(--shadow-card);
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-row div {
+  padding: 22px 20px;
+
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.68);
+  text-align: center;
+}
+
+.comparison-row div:first-child {
+  color: #fff;
+  font-weight: 800;
+  text-align: left;
+}
+
+.comparison-row div:last-child {
+  border-right: none;
+}
+
+.comparison-head {
+  background:
+    linear-gradient(135deg, rgba(255, 122, 0, 0.18), rgba(255, 255, 255, 0.03));
+}
+
+.comparison-head div {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.comparison-row i.fa-check {
+  color: var(--orange);
+  filter: drop-shadow(0 0 10px rgba(255, 122, 0, 0.55));
+}
+
+.comparison-row i.fa-minus {
+  color: rgba(255, 255, 255, 0.32);
+}
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+.plans-benefits-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.plans-benefit-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 34px 26px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+
+  box-shadow: var(--shadow-card);
+
+  transition:
+    transform 0.4s var(--transition),
+    border-color 0.4s var(--transition),
+    box-shadow 0.4s var(--transition);
+}
+
+.plans-benefit-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(circle at top, rgba(255, 122, 0, 0.13), transparent 60%);
+  opacity: 0;
+
+  transition: opacity 0.4s;
+}
+
+.plans-benefit-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 122, 0, 0.3);
+  box-shadow:
+    0 22px 65px rgba(0, 0, 0, 0.58),
+    0 0 30px rgba(255, 122, 0, 0.13);
+}
+
+.plans-benefit-card:hover::before {
+  opacity: 1;
+}
+
+.plans-benefit-card i,
+.plans-benefit-card h3,
+.plans-benefit-card p {
+  position: relative;
+  z-index: 2;
+}
+
+.plans-benefit-card i {
+  margin-bottom: 18px;
+
+  color: var(--orange);
+  font-size: 34px;
+
+  filter: drop-shadow(0 0 14px rgba(255, 122, 0, 0.45));
+}
+
+.plans-benefit-card h3 {
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+.plans-benefit-card p {
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.6;
+}
+
+/* =========================
+   MODAL
+   Estrutura principal vem do style.css
+========================= */
+.matricula-modal-content {
+  max-width: 880px;
+}
+
+.matricula-form {
+  margin-top: 28px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.matricula-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Modalidades adicionais */
+.modalidades-interesse {
+  margin-top: 6px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.modalidade-check {
+  min-height: 58px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  display: grid;
+  grid-template-columns: 18px 1fr auto;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.045);
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s var(--transition),
+    background 0.3s var(--transition),
+    border-color 0.3s var(--transition);
+}
+
+.modalidade-check:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 122, 0, 0.45);
+  background: rgba(255, 122, 0, 0.08);
+}
+
+.modalidade-check input {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+
+  accent-color: var(--orange);
+  cursor: pointer;
+}
+
+.modalidade-check span {
+  line-height: 1.2;
+}
+
+.modalidade-check small {
+  color: var(--orange);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.15;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.modalidades-empty,
+.modalidades-help {
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 13px;
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+.plans-final-cta {
+  padding: 120px 8%;
+
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(8, 8, 8, 0.7), rgba(8, 8, 8, 0.92)),
+    url("img/gym3.jpeg") center/cover no-repeat;
+}
+
+/* =========================
+   AJUSTES DE SCROLL
+========================= */
+.plans-options,
+.plans-comparison,
+.plans-benefits,
+.plans-faq,
+.plans-final-cta {
+  scroll-margin-top: 90px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 1100px) {
+  .pricing-container {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+
+  .pricing-card.featured:hover {
+    transform: translateY(-14px);
+  }
+
+  .plans-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comparison-table {
+    overflow-x: auto;
+  }
+
+  .comparison-row {
+    min-width: 760px;
+  }
+}
+
+@media (max-width: 768px) {
+  .plans-hero {
+    padding: 120px 6% 70px;
+  }
+
+  .plans-hero-content p {
+    font-size: 15px;
+  }
+
+  .plans-hero-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .plans-hero-buttons .start-btn,
+  .plans-hero-buttons .outline-btn,
+  .services-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .plans-intro,
+  .plans-options,
+  .plans-comparison,
+  .plans-benefits,
+  .plans-faq,
+  .plans-final-cta {
+    padding: 90px 6%;
+  }
+
+  .pricing-card {
+    min-height: auto;
+    padding: 34px 26px;
+  }
+
+  .pricing-price strong {
+    font-size: 58px;
+  }
+
+  .plans-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .matricula-grid,
+  .modalidades-interesse {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .plans-hero-content h1 {
+    font-size: 44px;
+  }
+
+  .pricing-card {
+    padding: 30px 22px;
+  }
+
+  .pricing-card h3 {
+    font-size: 28px;
+  }
+
+  .pricing-price strong {
+    font-size: 52px;
+  }
+
+  .popular-tag {
+    top: 16px;
+    right: 16px;
+  }
+}

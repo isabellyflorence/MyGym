@@ -1,0 +1,568 @@
+/* =========================
+   CONTATO | AJUSTES DA PÁGINA
+   O visual global vem do style.css
+========================= */
+
+/* =========================
+   HERO
+========================= */
+.contact-hero {
+  min-height: 100vh;
+  padding: 120px 8% 80px;
+
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(rgba(8, 8, 8, 0.68), rgba(8, 8, 8, 0.96)),
+    url("img/gym3.jpeg") center/cover no-repeat;
+}
+
+.contact-hero::before,
+.contact-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.contact-hero::before {
+  background:
+    radial-gradient(circle at 25% 30%, rgba(255, 122, 0, 0.22), transparent 35%),
+    radial-gradient(circle at 80% 72%, rgba(255, 69, 0, 0.14), transparent 35%);
+}
+
+.contact-hero::after {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+
+  background-size: 48px 48px;
+  opacity: 0.35;
+}
+
+.contact-hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 950px;
+  text-align: center;
+
+  animation: heroEntrance 1s var(--transition) both;
+}
+
+.contact-hero-content span {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  text-shadow: 0 0 20px rgba(255, 122, 0, 0.7);
+}
+
+.contact-hero-content h1 {
+  margin-bottom: 24px;
+
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(46px, 6.6vw, 78px);
+  line-height: 0.95;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+
+  text-shadow:
+    0 8px 50px rgba(0, 0, 0, 0.8),
+    0 0 55px rgba(255, 122, 0, 0.22);
+}
+
+.contact-hero-content h1 strong {
+  color: var(--orange);
+  font-weight: inherit;
+
+  text-shadow:
+    0 0 28px rgba(255, 122, 0, 0.8),
+    0 0 60px rgba(255, 122, 0, 0.35);
+}
+
+.contact-hero-content p {
+  max-width: 720px;
+  margin: 0 auto;
+
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.contact-hero-buttons {
+  margin-top: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.contact-hero-buttons .start-btn,
+.contact-hero-buttons .outline-btn {
+  width: 300px;
+  height: 68px;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50px;
+  text-decoration: none !important;
+
+  animation: serviceButtonEntrance 0.9s var(--transition) both;
+}
+
+/* Botão secundário */
+.outline-btn {
+  border: 2px solid var(--orange);
+
+  background: rgba(8, 8, 8, 0.35);
+  color: #fff;
+
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 20px rgba(255, 122, 0, 0.2),
+    inset 0 0 20px rgba(255, 122, 0, 0.05);
+
+  transition:
+    transform 0.3s var(--transition),
+    box-shadow 0.3s var(--transition),
+    background 0.3s var(--transition),
+    border-color 0.3s var(--transition);
+}
+
+.contact-hero-buttons .start-btn:hover,
+.contact-hero-buttons .outline-btn:hover {
+  transform: translateY(-4px);
+  border-color: transparent;
+
+  background: linear-gradient(135deg, var(--orange), var(--orange-hot));
+  color: #fff;
+
+  box-shadow:
+    0 8px 40px rgba(255, 122, 0, 0.5),
+    0 0 60px rgba(255, 122, 0, 0.2);
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+.contact-info-section,
+.contact-form-section,
+.location-section,
+.contact-faq,
+.contact-final-cta {
+  position: relative;
+  padding: 110px 8%;
+  overflow: hidden;
+}
+
+.contact-info-section,
+.location-section,
+.contact-final-cta {
+  background:
+    radial-gradient(circle at top left, rgba(255, 122, 0, 0.08), transparent 35%),
+    linear-gradient(180deg, var(--black), #0c0c0c);
+}
+
+.contact-form-section,
+.contact-faq {
+  background:
+    radial-gradient(circle at bottom right, rgba(255, 69, 0, 0.07), transparent 35%),
+    linear-gradient(180deg, #0c0c0c, var(--black));
+}
+
+/* =========================
+   CARDS DE CONTATO
+========================= */
+.contact-info-grid {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.contact-info-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 34px 26px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+
+  box-shadow: var(--shadow-card);
+  text-align: center;
+
+  transition:
+    transform 0.4s var(--transition),
+    border-color 0.4s var(--transition),
+    box-shadow 0.4s var(--transition);
+}
+
+.contact-info-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(circle at top, rgba(255, 122, 0, 0.13), transparent 60%);
+  opacity: 0;
+
+  transition: opacity 0.4s;
+}
+
+.contact-info-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 122, 0, 0.3);
+  box-shadow:
+    0 22px 65px rgba(0, 0, 0, 0.58),
+    0 0 30px rgba(255, 122, 0, 0.13);
+}
+
+.contact-info-card:hover::before {
+  opacity: 1;
+}
+
+.contact-info-card i,
+.contact-info-card h3,
+.contact-info-card p,
+.contact-info-card a {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-info-card i {
+  margin-bottom: 18px;
+
+  color: var(--orange);
+  font-size: 34px;
+
+  filter: drop-shadow(0 0 14px rgba(255, 122, 0, 0.45));
+}
+
+.contact-info-card h3 {
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+.contact-info-card p {
+  margin-bottom: 14px;
+
+  color: rgba(255, 255, 255, 0.58);
+  line-height: 1.6;
+}
+
+.contact-info-card a {
+  color: var(--orange);
+  font-weight: 800;
+}
+
+/* =========================
+   FORMULÁRIO
+========================= */
+.contact-layout {
+  max-width: 1120px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.contact-text h2 {
+  margin-bottom: 18px;
+
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(40px, 5vw, 56px);
+  line-height: 1;
+  letter-spacing: 3px;
+
+  background: linear-gradient(135deg, #fff 35%, var(--orange-glow));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  filter: drop-shadow(0 0 25px rgba(255, 122, 0, 0.12));
+}
+
+.contact-text p {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.contact-highlights {
+  margin-top: 28px;
+
+  display: grid;
+  gap: 14px;
+}
+
+.contact-highlights div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.contact-highlights i {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255, 122, 0, 0.14);
+  color: var(--orange);
+
+  font-size: 12px;
+}
+
+.contact-form-large {
+  max-width: 100%;
+  margin: 0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.contact-form select {
+  width: 100%;
+  padding: 17px 18px;
+
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  background: rgba(255, 255, 255, 0.045);
+  color: #fff;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.3s var(--transition),
+    box-shadow 0.3s var(--transition),
+    background 0.3s var(--transition);
+}
+
+.contact-form select:focus {
+  border-color: rgba(255, 122, 0, 0.75);
+  background: rgba(255, 255, 255, 0.065);
+
+  box-shadow:
+    0 0 0 4px rgba(255, 122, 0, 0.1),
+    0 0 26px rgba(255, 122, 0, 0.12);
+}
+
+.contact-form select option {
+  background: #111;
+  color: #fff;
+}
+
+/* =========================
+   LOCALIZAÇÃO
+========================= */
+.location-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.location-card {
+  position: relative;
+  overflow: hidden;
+
+  padding: 40px 34px;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025));
+
+  box-shadow: var(--shadow-card);
+
+  transition:
+    transform 0.4s var(--transition),
+    border-color 0.4s var(--transition),
+    box-shadow 0.4s var(--transition);
+}
+
+.location-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 122, 0, 0.3);
+  box-shadow:
+    0 22px 65px rgba(0, 0, 0, 0.58),
+    0 0 30px rgba(255, 122, 0, 0.13);
+}
+
+.location-card i {
+  margin-bottom: 20px;
+
+  color: var(--orange);
+  font-size: 38px;
+
+  filter: drop-shadow(0 0 14px rgba(255, 122, 0, 0.45));
+}
+
+.location-card h3 {
+  margin-bottom: 14px;
+  font-size: 25px;
+}
+
+.location-card p,
+.location-card li {
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.7;
+}
+
+.location-card ul {
+  display: grid;
+  gap: 10px;
+
+  list-style: none;
+}
+
+.location-card a {
+  display: inline-block;
+
+  margin-top: 18px;
+
+  color: var(--orange);
+  font-weight: 800;
+}
+
+/* =========================
+   CTA FINAL
+========================= */
+.contact-final-cta {
+  padding: 120px 8%;
+  text-align: center;
+
+  background:
+    linear-gradient(rgba(8, 8, 8, 0.7), rgba(8, 8, 8, 0.92)),
+    url("img/gym2.jpeg") center/cover no-repeat;
+}
+
+/* =========================
+   AJUSTES DE SCROLL
+========================= */
+.contact-info-section,
+.contact-form-section,
+.location-section,
+.contact-faq,
+.contact-final-cta {
+  scroll-margin-top: 90px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+@media (max-width: 1100px) {
+  .contact-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 120px 6% 70px;
+  }
+
+  .contact-hero-content p {
+    font-size: 15px;
+  }
+
+  .contact-hero-buttons {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .contact-hero-buttons .start-btn,
+  .contact-hero-buttons .outline-btn,
+  .services-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .contact-info-section,
+  .contact-form-section,
+  .location-section,
+  .contact-faq,
+  .contact-final-cta {
+    padding: 90px 6%;
+  }
+
+  .contact-info-grid,
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-large {
+    padding: 28px 22px;
+  }
+}
+
+@media (max-width: 560px) {
+  .contact-hero-content h1 {
+    font-size: 44px;
+  }
+
+  .contact-info-card,
+  .location-card {
+    padding: 30px 24px;
+  }
+
+  .contact-text h2 {
+    font-size: 40px;
+  }
+}

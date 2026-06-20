@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Painel Admin | MyGym</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="admin.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       SIDEBAR
+  ========================== -->
+  <aside class="admin-sidebar">
+
+    <div class="admin-logo">
+      <img src="img/logo.png" alt="Logo MyGym">
+      <h1>My<span>Gym</span></h1>
+    </div>
+
+    <nav class="admin-menu">
+
+      <a href="#dashboard">
+        <i class="fa-solid fa-chart-line"></i>
+        Dashboard
+      </a>
+
+      <a href="#servicos">
+        <i class="fa-solid fa-dumbbell"></i>
+        Serviços
+      </a>
+
+      <a href="#planos">
+        <i class="fa-solid fa-credit-card"></i>
+        Planos
+      </a>
+
+      <a href="#solicitacoes">
+        <i class="fa-solid fa-user-plus"></i>
+        Solicitações
+      </a>
+
+      <a href="index.html">
+        <i class="fa-solid fa-globe"></i>
+        Ver site
+      </a>
+
+      <button type="button" onclick="sairAdmin()">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Sair
+      </button>
+
+    </nav>
+
+  </aside>
+
+  <!-- =========================
+       CONTEÚDO PRINCIPAL
+  ========================== -->
+  <main class="admin-main">
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+    <section id="dashboard" class="admin-hero">
+
+      <div>
+        <span>Área restrita</span>
+
+        <h2>Painel Administrativo</h2>
+
+        <p>
+          Gerencie os serviços adicionais, planos e solicitações de matrícula da MyGym.
+        </p>
+      </div>
+
+      <div class="admin-summary">
+
+        <div>
+          <strong id="totalServicos">0</strong>
+          <span>Serviços totais</span>
+        </div>
+
+        <div>
+          <strong id="totalPlanos">0</strong>
+          <span>Planos</span>
+        </div>
+
+        <div>
+          <strong id="totalSolicitacoes">0</strong>
+          <span>Solicitações</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================
+         SERVIÇOS ADICIONAIS
+    ========================== -->
+    <section id="servicos" class="admin-section">
+
+      <div class="section-title">
+        <span>CRUD</span>
+
+        <h2>Gerenciar Serviços Adicionais</h2>
+
+        <p>
+          Cadastre, edite, visualize e remova modalidades extras da academia.
+        </p>
+      </div>
+
+      <form id="formServico" class="admin-form">
+
+        <input type="hidden" id="servicoId">
+
+        <div class="form-grid">
+
+          <div class="input-group">
+            <label for="servicoNome">Nome do serviço adicional</label>
+
+            <input
+              id="servicoNome"
+              type="text"
+              placeholder="Ex: Natação"
+              required
+            >
+          </div>
+
+          <div class="input-group">
+            <label for="servicoPreco">Valor adicional</label>
+
+            <input
+              id="servicoPreco"
+              type="number"
+              placeholder="Ex: 49"
+              required
+            >
+          </div>
+
+        </div>
+
+        <div class="input-group">
+          <label for="servicoIcone">Ícone Font Awesome</label>
+
+          <input
+            id="servicoIcone"
+            type="text"
+            placeholder="Ex: fa-solid fa-dumbbell"
+            required
+          >
+        </div>
+
+        <div class="input-group">
+          <label for="servicoImagemArquivo">Imagem do serviço</label>
+
+          <input
+            id="servicoImagemArquivo"
+            type="file"
+            accept="image/*"
+          >
+
+          <input
+            id="servicoImagem"
+            type="hidden"
+          >
+
+          <small class="form-help">
+            Escolha uma imagem do computador. Ao editar, a imagem antiga será mantida se nenhuma nova for escolhida.
+          </small>
+        </div>
+
+        <div class="input-group">
+          <label for="servicoDescricao">Descrição</label>
+
+          <textarea
+            id="servicoDescricao"
+            placeholder="Descrição do serviço"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="admin-btn">
+            Salvar Serviço
+          </button>
+        </div>
+
+      </form>
+
+      <div id="listaServicos" class="admin-list"></div>
+
+    </section>
+
+    <!-- =========================
+         PLANOS FIXOS
+    ========================== -->
+    <section id="planos" class="admin-section">
+
+      <div class="section-title">
+        <span>Edição</span>
+
+        <h2>Editar Planos</h2>
+
+        <p>
+          Atualize valores, descrições e benefícios dos planos principais da academia.
+        </p>
+      </div>
+
+      <form id="formPlano" class="admin-form">
+
+        <input type="hidden" id="planoId">
+
+        <div class="form-grid">
+
+          <div class="input-group">
+            <label for="planoNome">Nome do plano</label>
+
+            <input
+              id="planoNome"
+              type="text"
+              placeholder="Ex: Premium"
+              required
+            >
+          </div>
+
+          <div class="input-group">
+            <label for="planoPreco">Preço</label>
+
+            <input
+              id="planoPreco"
+              type="number"
+              placeholder="Ex: 99"
+              required
+            >
+          </div>
+
+        </div>
+
+        <div class="input-group">
+          <label for="planoDescricao">Descrição</label>
+
+          <textarea
+            id="planoDescricao"
+            placeholder="Descrição do plano"
+            required
+          ></textarea>
+        </div>
+
+        <div class="input-group">
+          <label for="planoBeneficios">Benefícios</label>
+
+          <textarea
+            id="planoBeneficios"
+            placeholder="Digite um benefício por linha"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="admin-btn">
+            Atualizar Plano
+          </button>
+        </div>
+
+      </form>
+
+      <div id="listaPlanos" class="admin-list"></div>
+
+    </section>
+
+    <!-- =========================
+         SOLICITAÇÕES DE MATRÍCULA
+    ========================== -->
+    <section id="solicitacoes" class="admin-section">
+
+      <div class="section-title section-title-actions">
+
+        <div>
+          <span>Leads</span>
+
+          <h2>Solicitações de Matrícula</h2>
+
+          <p>
+            Veja os interessados nos planos e acompanhe o status de cada contato.
+          </p>
+        </div>
+
+        <button type="button" class="export-btn" onclick="exportarSolicitacoesExcel()">
+          <i class="fa-solid fa-file-excel"></i>
+          Exportar Excel
+        </button>
+
+      </div>
+
+      <div id="listaSolicitacoes" class="admin-list"></div>
+
+    </section>
+
+  </main>
+
+  <!-- JS -->
+  <script src="admin.js"></script>
+
+</body>
+
+</html>

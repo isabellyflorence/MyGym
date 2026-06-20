@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Planos | MyGym</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="planos.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="navbar">
+
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo MyGym">
+      <h1>My<span>Gym</span></h1>
+    </div>
+
+    <nav id="menu">
+      <ul>
+        <li>
+          <a href="index.html">Início</a>
+        </li>
+
+        <li>
+          <a href="servicos.html">Serviços</a>
+        </li>
+
+        <li>
+          <a href="planos.html" class="active">Planos</a>
+        </li>
+
+        <li>
+          <a href="contato.html">Contato</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <a class="join-btn" href="login.html">
+      Entrar
+    </a>
+
+  </header>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+  <section class="plans-hero">
+
+    <div class="plans-hero-content">
+
+      <span>Escolha sua evolução</span>
+
+      <h1>
+        Planos feitos para o seu <strong>ritmo</strong>
+      </h1>
+
+      <p>
+        Escolha o plano ideal para começar, evoluir ou ter uma experiência
+        completa com todos os serviços da MyGym.
+      </p>
+
+      <div class="plans-hero-buttons">
+        <a href="#plans-options" class="start-btn">
+          Ver Planos
+        </a>
+
+        <a href="#plans-comparison" class="outline-btn">
+          Comparar
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       INTRODUÇÃO
+  ========================== -->
+  <section class="plans-intro">
+
+    <div class="section-header">
+
+      <span class="section-tag">Nossos planos</span>
+
+      <h2>Escolha o plano que combina com você</h2>
+
+      <p>
+        Cada plano foi pensado para um tipo de rotina. Seja para treinar o básico,
+        melhorar o condicionamento ou ter acompanhamento completo, a MyGym tem
+        uma opção para o seu momento.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       PLANOS PRINCIPAIS
+       Cards criados pelo public.js
+  ========================== -->
+  <section id="plans-options" class="plans-options">
+
+    <div id="planosPagina" class="pricing-container"></div>
+
+  </section>
+
+  <!-- =========================
+       COMPARAÇÃO
+  ========================== -->
+  <section id="plans-comparison" class="plans-comparison">
+
+    <div class="section-header">
+
+      <span class="section-tag">Comparativo</span>
+
+      <h2>Compare os planos</h2>
+
+      <p>
+        Veja rapidamente o que cada plano oferece e escolha o que faz mais sentido
+        para seus objetivos.
+      </p>
+
+    </div>
+
+    <div class="comparison-table">
+
+      <div class="comparison-row comparison-head">
+        <div>Benefícios</div>
+        <div>Básico</div>
+        <div>Premium</div>
+        <div>Elite</div>
+      </div>
+
+      <div class="comparison-row">
+        <div>Musculação</div>
+        <div><i class="fa-solid fa-check"></i></div>
+        <div><i class="fa-solid fa-check"></i></div>
+        <div><i class="fa-solid fa-check"></i></div>
+      </div>
+
+      <div class="comparison-row">
+        <div>Cardio</div>
+        <div><i class="fa-solid fa-minus"></i></div>
+        <div><i class="fa-solid fa-check"></i></div>
+        <div><i class="fa-solid fa-check"></i></div>
+      </div>
+
+      <div class="comparison-row">
+        <div>Aulas em grupo</div>
+        <div><i class="fa-solid fa-minus"></i></div>
+        <div><i class="fa-solid fa-check"></i></div>
+        <div><i class="fa-solid fa-check"></i></div>
+      </div>
+
+      <div class="comparison-row">
+        <div>Jiu-Jitsu</div>
+        <div><i class="fa-solid fa-minus"></i></div>
+        <div><i class="fa-solid fa-minus"></i></div>
+        <div><i class="fa-solid fa-check"></i></div>
+      </div>
+
+      <div class="comparison-row">
+        <div>Personal Trainer</div>
+        <div><i class="fa-solid fa-minus"></i></div>
+        <div><i class="fa-solid fa-minus"></i></div>
+        <div><i class="fa-solid fa-check"></i></div>
+      </div>
+
+      <div class="comparison-row">
+        <div>Melhor para</div>
+        <div>Começar</div>
+        <div>Evoluir</div>
+        <div>Resultado completo</div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       BENEFÍCIOS GERAIS
+  ========================== -->
+  <section class="plans-benefits">
+
+    <div class="section-header">
+
+      <span class="section-tag">Vantagens</span>
+
+      <h2>O que você encontra em todos os planos</h2>
+
+      <p>
+        Independente do plano escolhido, você terá acesso a uma estrutura pensada
+        para tornar seu treino mais confortável, seguro e motivador.
+      </p>
+
+    </div>
+
+    <div class="plans-benefits-grid">
+
+      <div class="plans-benefit-card">
+        <i class="fa-solid fa-dumbbell"></i>
+        <h3>Estrutura moderna</h3>
+        <p>Equipamentos preparados para diferentes tipos de treino.</p>
+      </div>
+
+      <div class="plans-benefit-card">
+        <i class="fa-solid fa-shield-heart"></i>
+        <h3>Treino com segurança</h3>
+        <p>Ambiente organizado para você treinar com mais confiança.</p>
+      </div>
+
+      <div class="plans-benefit-card">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Flexibilidade</h3>
+        <p>Escolha o plano que melhor se encaixa na sua rotina.</p>
+      </div>
+
+      <div class="plans-benefit-card">
+        <i class="fa-solid fa-fire"></i>
+        <h3>Motivação</h3>
+        <p>Uma academia com energia para você manter a constância.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FAQ
+  ========================== -->
+  <section class="plans-faq">
+
+    <div class="section-header">
+
+      <span class="section-tag">Dúvidas frequentes</span>
+
+      <h2>Perguntas sobre os planos</h2>
+
+      <p>
+        Tire suas principais dúvidas antes de escolher.
+      </p>
+
+    </div>
+
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <h3>Posso trocar de plano depois?</h3>
+        <p>
+          Sim. Você pode começar com um plano e mudar para outro conforme sua
+          rotina e seus objetivos forem evoluindo.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Qual plano é melhor para iniciantes?</h3>
+        <p>
+          O plano Básico é uma boa opção para começar. Mas se você quiser cardio
+          e aulas em grupo, o Premium oferece mais possibilidades.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>O plano Elite inclui todos os serviços?</h3>
+        <p>
+          Sim. O plano Elite é o mais completo e inclui musculação, cardio,
+          Jiu-Jitsu e acompanhamento com personal.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Preciso fechar o plano presencialmente?</h3>
+        <p>
+          Você pode escolher pelo site e entrar em contato com a equipe para
+          finalizar sua matrícula.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CTA FINAL
+  ========================== -->
+  <section class="plans-final-cta">
+
+    <div class="final-cta-content">
+
+      <span>Comece hoje</span>
+
+      <h2>Escolha seu plano e venha evoluir com a MyGym.</h2>
+
+      <p>
+        Seu próximo treino pode ser o primeiro passo para uma rotina com mais
+        saúde, força e disposição.
+      </p>
+
+      <a href="#plans-options" class="services-btn">
+        Ver Planos
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       MODAL DE DETALHES DO PLANO
+  ========================== -->
+  <div id="planModal" class="plan-modal">
+
+    <div class="plan-modal-content">
+
+      <button class="modal-close" onclick="fecharModalPlano()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-top">
+
+        <div>
+          <span id="modalTag" class="modal-tag">Plano</span>
+
+          <h2 id="modalTitulo">
+            Plano Básico
+          </h2>
+
+          <p id="modalDescricao">
+            Descrição do plano.
+          </p>
+        </div>
+
+        <div class="modal-price-box">
+          <span>A partir de</span>
+          <strong id="modalPreco">R$ 59/mês</strong>
+        </div>
+
+      </div>
+
+      <div class="modal-info-grid">
+
+        <div class="modal-section">
+          <h3>
+            <i class="fa-solid fa-check"></i>
+            Benefícios inclusos
+          </h3>
+
+          <ul id="modalBeneficios"></ul>
+        </div>
+
+        <div class="modal-section">
+          <h3>
+            <i class="fa-solid fa-credit-card"></i>
+            Formas de pagamento
+          </h3>
+
+          <ul>
+            <li>Cartão de crédito</li>
+            <li>Cartão de débito</li>
+            <li>Pix</li>
+            <li>Dinheiro na recepção</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="modal-section modal-observation">
+        <h3>
+          <i class="fa-solid fa-circle-info"></i>
+          Observações
+        </h3>
+
+        <p id="modalObservacao">
+          Consulte a recepção para confirmar disponibilidade, horários e condições.
+        </p>
+      </div>
+
+      <div class="modal-actions">
+
+        <button type="button" class="modal-main-btn" onclick="abrirModalMatricula()">
+          Quero esse plano
+        </button>
+
+        <button type="button" class="modal-secondary-btn" onclick="fecharModalPlano()">
+          Ver outros planos
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       MODAL DE MATRÍCULA
+  ========================== -->
+  <div id="matriculaModal" class="plan-modal">
+
+    <div class="plan-modal-content matricula-modal-content">
+
+      <button class="modal-close" onclick="fecharModalMatricula()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <span class="modal-tag">Pré-matrícula</span>
+
+      <h2>Solicitar Matrícula</h2>
+
+      <p>
+        Preencha seus dados e a equipe MyGym entrará em contato para finalizar sua matrícula.
+      </p>
+
+      <form class="matricula-form" onsubmit="enviarSolicitacaoMatricula(event)">
+
+        <div class="matricula-grid">
+
+          <div class="input-group-modal">
+            <label for="matriculaNome">Nome completo</label>
+            <input id="matriculaNome" type="text" placeholder="Digite seu nome" required>
+          </div>
+
+          <div class="input-group-modal">
+            <label for="matriculaTelefone">WhatsApp</label>
+            <input id="matriculaTelefone" type="tel" placeholder="Ex: (21) 99999-9999" required>
+          </div>
+
+        </div>
+
+        <div class="matricula-grid">
+
+          <div class="input-group-modal">
+            <label for="matriculaEmail">E-mail</label>
+            <input id="matriculaEmail" type="email" placeholder="Digite seu e-mail" required>
+          </div>
+
+          <div class="input-group-modal">
+            <label for="matriculaPlano">Plano escolhido</label>
+            <input id="matriculaPlano" type="text" readonly>
+          </div>
+
+        </div>
+
+        <div class="input-group-modal">
+          <label for="matriculaHorario">Melhor horário para contato</label>
+
+          <select id="matriculaHorario" required>
+            <option value="">Selecione uma opção</option>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+            <option value="Qualquer horário">Qualquer horário</option>
+          </select>
+        </div>
+
+        <div class="input-group-modal">
+          <label>Modalidades adicionais de interesse</label>
+
+          <div id="modalidadesInteresse" class="modalidades-interesse">
+            <p class="modalidades-empty">
+              Nenhuma modalidade adicional cadastrada no momento.
+            </p>
+          </div>
+
+          <small class="modalidades-help">
+            Opcional: marque as modalidades que você gostaria de adicionar ao plano.
+          </small>
+        </div>
+
+        <div class="input-group-modal">
+          <label for="matriculaObservacao">Observação</label>
+
+          <textarea
+            id="matriculaObservacao"
+            placeholder="Ex: Tenho interesse em visitar a academia antes."
+          ></textarea>
+        </div>
+
+        <div class="modal-actions">
+
+          <button type="submit" class="modal-main-btn">
+            Enviar solicitação
+          </button>
+
+          <button type="button" class="modal-secondary-btn" onclick="fecharModalMatricula()">
+            Cancelar
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+
+    <div class="footer-logo">
+      <h2>My<span>Gym</span></h2>
+      <p>Transforme seu corpo. Evolua sua rotina.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="contato.html">Contato</a>
+    </div>
+
+    <p class="footer-copy">
+      © 2026 MyGym. Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+  <script src="public.js"></script>
+
+</body>
+
+</html>

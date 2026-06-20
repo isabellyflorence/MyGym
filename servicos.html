@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Serviços | MyGym</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="servico.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="navbar">
+
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo MyGym">
+      <h1>My<span>Gym</span></h1>
+    </div>
+
+    <nav id="menu">
+      <ul>
+        <li>
+          <a href="index.html">Início</a>
+        </li>
+
+        <li>
+          <a href="servicos.html" class="active">Serviços</a>
+        </li>
+
+        <li>
+          <a href="planos.html">Planos</a>
+        </li>
+
+        <li>
+          <a href="contato.html">Contato</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <a class="join-btn" href="login.html">
+      Entrar
+    </a>
+
+  </header>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+  <section class="services-hero">
+
+    <div class="services-hero-content">
+
+      <span>Treine do seu jeito</span>
+
+      <h1>
+        Serviços pensados para sua <strong>evolução</strong>
+      </h1>
+
+      <p>
+        Na MyGym, você encontra estrutura, acompanhamento e modalidades completas
+        para transformar sua rotina de treino com mais foco, segurança e resultado.
+      </p>
+
+      <div class="services-hero-buttons">
+        <a href="#all-services" class="start-btn">
+          Conhecer Serviços
+        </a>
+
+        <a href="planos.html#plans-options" class="outline-btn">
+          Ver Planos
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       INTRODUÇÃO
+  ========================== -->
+  <section class="services-intro">
+
+    <div class="intro-text">
+
+      <span class="section-tag">Sobre nossos serviços</span>
+
+      <h2>
+        Mais do que treinar, aqui você constrói uma rotina saudável.
+      </h2>
+
+      <p>
+        Nossa proposta é oferecer uma experiência completa para quem deseja
+        melhorar o condicionamento físico, ganhar massa muscular, perder gordura,
+        aumentar a disposição ou simplesmente cuidar melhor da saúde.
+      </p>
+
+      <p>
+        Seja você iniciante ou avançado, nossos serviços foram organizados para
+        atender diferentes objetivos, respeitando seu ritmo e sua evolução.
+      </p>
+
+    </div>
+
+    <div class="intro-card">
+
+      <i class="fa-solid fa-fire-flame-curved"></i>
+
+      <h3>Experiência completa</h3>
+
+      <p>
+        Estrutura moderna, treinos variados, profissionais qualificados e planos
+        flexíveis para encaixar na sua rotina.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       SERVIÇOS PRINCIPAIS
+  ========================== -->
+  <section id="all-services" class="all-services">
+
+    <div class="section-header">
+
+      <span class="section-tag">Modalidades</span>
+
+      <h2>Nossos principais serviços</h2>
+
+      <p>
+        Conheça as modalidades disponíveis na MyGym e escolha a que mais combina
+        com seu objetivo.
+      </p>
+
+    </div>
+
+    <div id="servicosPagina" class="services-grid">
+
+      <article class="service-large-card">
+
+        <div class="service-image">
+          <img src="img/musculação.jpg" alt="Pessoa treinando musculação">
+        </div>
+
+        <div class="service-content">
+
+          <div class="service-icon">
+            <i class="fa-solid fa-dumbbell"></i>
+          </div>
+
+          <h3>Musculação</h3>
+
+          <p>
+            A musculação é ideal para quem busca força, definição, ganho de massa
+            muscular, melhora da postura e fortalecimento geral do corpo.
+          </p>
+
+          <ul>
+            <li>Equipamentos modernos e variados</li>
+            <li>Treinos para iniciantes e avançados</li>
+            <li>Foco em força, resistência e hipertrofia</li>
+            <li>Ambiente seguro e organizado</li>
+          </ul>
+
+          <a href="planos.html#plans-options" class="service-link">
+            Ver plano ideal
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="service-large-card reverse">
+
+        <div class="service-image">
+          <img src="img/cardio.jpeg" alt="Pessoa treinando cardio">
+        </div>
+
+        <div class="service-content">
+
+          <div class="service-icon">
+            <i class="fa-solid fa-heart-pulse"></i>
+          </div>
+
+          <h3>Cardio</h3>
+
+          <p>
+            Os treinos de cardio ajudam a melhorar a resistência, aumentar o
+            gasto calórico e fortalecer o sistema cardiovascular.
+          </p>
+
+          <ul>
+            <li>Esteiras, bicicletas e equipamentos aeróbicos</li>
+            <li>Melhora do fôlego e condicionamento</li>
+            <li>Auxílio na perda de gordura</li>
+            <li>Mais energia para o dia a dia</li>
+          </ul>
+
+          <a href="planos.html#plans-options" class="service-link">
+            Ver plano ideal
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="service-large-card">
+
+        <div class="service-image">
+          <img src="img/jiu-jitsu.jpg" alt="Aula de Jiu-Jitsu">
+        </div>
+
+        <div class="service-content">
+
+          <div class="service-icon">
+            <i class="fa-solid fa-user-ninja"></i>
+          </div>
+
+          <h3>Jiu-Jitsu</h3>
+
+          <p>
+            Uma modalidade completa para desenvolver disciplina, resistência,
+            autoconfiança, defesa pessoal e condicionamento físico.
+          </p>
+
+          <ul>
+            <li>Aulas para diferentes níveis</li>
+            <li>Melhora da coordenação e agilidade</li>
+            <li>Disciplina, foco e autocontrole</li>
+            <li>Treino físico e mental</li>
+          </ul>
+
+          <a href="planos.html#plans-options" class="service-link">
+            Ver plano ideal
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+      <article class="service-large-card reverse">
+
+        <div class="service-image">
+          <img src="img/personal.jpg" alt="Personal Trainer orientando aluno">
+        </div>
+
+        <div class="service-content">
+
+          <div class="service-icon">
+            <i class="fa-solid fa-clipboard-list"></i>
+          </div>
+
+          <h3>Personal Trainer</h3>
+
+          <p>
+            Acompanhamento individual para quem deseja mais direcionamento,
+            segurança, correção dos exercícios e resultados mais assertivos.
+          </p>
+
+          <ul>
+            <li>Treino personalizado para seu objetivo</li>
+            <li>Correção de postura e execução</li>
+            <li>Acompanhamento da evolução</li>
+            <li>Mais segurança e eficiência</li>
+          </ul>
+
+          <a href="planos.html#plans-options" class="service-link">
+            Ver plano ideal
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       SERVIÇOS ADICIONAIS
+  ========================== -->
+  <section class="extra-services-section">
+
+    <div class="section-header">
+
+      <span class="section-tag">Serviços extras</span>
+
+      <h2>Modalidades adicionais</h2>
+
+      <p>
+        Além dos serviços principais, a MyGym oferece modalidades extras que podem
+        ser adicionadas ao seu plano.
+      </p>
+
+    </div>
+
+    <div id="servicosExtras" class="extra-services-grid"></div>
+
+  </section>
+
+  <!-- =========================
+       DIFERENCIAIS
+  ========================== -->
+  <section class="gym-differentials">
+
+    <div class="section-header">
+
+      <span class="section-tag">Diferenciais</span>
+
+      <h2>Por que treinar na MyGym?</h2>
+
+      <p>
+        Criamos uma experiência que une estrutura, motivação e praticidade para
+        você manter a constância nos treinos.
+      </p>
+
+    </div>
+
+    <div class="differentials-grid">
+
+      <div class="differential-card">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Horários flexíveis</h3>
+        <p>Treine no horário que mais combina com sua rotina.</p>
+      </div>
+
+      <div class="differential-card">
+        <i class="fa-solid fa-users"></i>
+        <h3>Aulas em grupo</h3>
+        <p>Mais motivação, energia e interação durante os treinos.</p>
+      </div>
+
+      <div class="differential-card">
+        <i class="fa-solid fa-medal"></i>
+        <h3>Equipe qualificada</h3>
+        <p>Profissionais preparados para orientar sua evolução.</p>
+      </div>
+
+      <div class="differential-card">
+        <i class="fa-solid fa-shower"></i>
+        <h3>Estrutura completa</h3>
+        <p>Ambiente confortável, moderno e preparado para sua rotina.</p>
+      </div>
+
+      <div class="differential-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h3>Foco em resultado</h3>
+        <p>Modalidades pensadas para diferentes objetivos.</p>
+      </div>
+
+      <div class="differential-card">
+        <i class="fa-solid fa-bolt"></i>
+        <h3>Energia e motivação</h3>
+        <p>Um espaço feito para você se sentir inspirado a continuar.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       COMO FUNCIONA
+  ========================== -->
+  <section class="how-it-works">
+
+    <div class="section-header">
+
+      <span class="section-tag">Comece agora</span>
+
+      <h2>Como começar na MyGym</h2>
+
+      <p>
+        Em poucos passos, você já pode escolher seu plano e iniciar sua jornada.
+      </p>
+
+    </div>
+
+    <div class="steps-container">
+
+      <div class="step-card">
+        <span>01</span>
+        <h3>Escolha seu objetivo</h3>
+        <p>
+          Defina se você quer ganhar massa, emagrecer, melhorar o condicionamento
+          ou treinar por saúde.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <span>02</span>
+        <h3>Escolha o serviço</h3>
+        <p>
+          Selecione entre musculação, cardio, jiu-jitsu, personal trainer ou uma
+          combinação de modalidades.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <span>03</span>
+        <h3>Escolha seu plano</h3>
+        <p>
+          Encontre o plano que combina melhor com sua rotina, frequência e
+          necessidade.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <span>04</span>
+        <h3>Comece a treinar</h3>
+        <p>
+          Inicie sua evolução com acompanhamento, estrutura e motivação.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       PLANOS RELACIONADOS
+  ========================== -->
+  <section id="service-plans" class="service-plans">
+
+    <div class="section-header">
+
+      <span class="section-tag">Planos</span>
+
+      <h2>Escolha o melhor plano para você</h2>
+
+      <p>
+        Cada plano foi pensado para um tipo de aluno e objetivo.
+      </p>
+
+    </div>
+
+    <div class="plans-container">
+
+      <div class="plan-card">
+        <h2>Básico</h2>
+        <p class="price">R$ 59/mês</p>
+        <p>Acesso à musculação</p>
+
+        <ul class="plan-list">
+          <li>Musculação livre</li>
+          <li>Acesso aos equipamentos</li>
+          <li>Ideal para iniciantes</li>
+        </ul>
+
+        <a href="planos.html#plans-options" class="plan-link-btn">
+          Escolher
+        </a>
+      </div>
+
+      <div class="plan-card destaque">
+        <h2>Premium</h2>
+        <p class="price">R$ 99/mês</p>
+        <p>Musculação + Cardio</p>
+
+        <ul class="plan-list">
+          <li>Musculação completa</li>
+          <li>Área de cardio</li>
+          <li>Melhor custo-benefício</li>
+        </ul>
+
+        <a href="planos.html#plans-options" class="plan-link-btn">
+          Escolher
+        </a>
+      </div>
+
+      <div class="plan-card">
+        <h2>Elite</h2>
+        <p class="price">R$ 149/mês</p>
+        <p>Todos os serviços + Personal</p>
+
+        <ul class="plan-list">
+          <li>Todos os serviços</li>
+          <li>Acompanhamento individual</li>
+          <li>Plano mais completo</li>
+        </ul>
+
+        <a href="planos.html#plans-options" class="plan-link-btn">
+          Escolher
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FAQ
+  ========================== -->
+  <section class="services-faq">
+
+    <div class="section-header">
+
+      <span class="section-tag">Dúvidas frequentes</span>
+
+      <h2>Perguntas comuns</h2>
+
+      <p>
+        Algumas respostas rápidas para quem quer começar.
+      </p>
+
+    </div>
+
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <h3>Preciso ter experiência para começar?</h3>
+        <p>
+          Não. A MyGym atende desde iniciantes até alunos avançados. Você pode
+          começar no seu ritmo.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Posso trocar de plano depois?</h3>
+        <p>
+          Sim. Você pode escolher um plano inicial e depois migrar para outro
+          conforme sua rotina e seus objetivos.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>O plano Elite inclui personal?</h3>
+        <p>
+          Sim. O plano Elite é ideal para quem quer acompanhamento mais próximo e
+          treino personalizado.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Tem aulas em grupo?</h3>
+        <p>
+          Sim. A MyGym oferece modalidades e atividades em grupo para deixar o
+          treino mais dinâmico e motivador.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CTA FINAL
+  ========================== -->
+  <section class="final-cta">
+
+    <div class="final-cta-content">
+
+      <span>Pronta para começar?</span>
+
+      <h2>
+        Seu próximo nível começa hoje.
+      </h2>
+
+      <p>
+        Escolha seu plano, venha treinar com a gente e transforme sua rotina com
+        mais saúde, energia e confiança.
+      </p>
+
+      <a href="planos.html#plans-options" class="services-btn">
+        Ver Planos
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+
+    <div class="footer-logo">
+      <h2>My<span>Gym</span></h2>
+      <p>Transforme seu corpo. Evolua sua rotina.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="contato.html">Contato</a>
+    </div>
+
+    <p class="footer-copy">
+      © 2026 MyGym. Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+  <script src="public.js"></script>
+
+</body>
+
+</html>

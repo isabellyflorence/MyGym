@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contato | MyGym</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contato.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+  <header class="navbar">
+
+    <div class="logo">
+      <img src="img/logo.png" alt="Logo MyGym">
+      <h1>My<span>Gym</span></h1>
+    </div>
+
+    <nav id="menu">
+      <ul>
+        <li>
+          <a href="index.html">Início</a>
+        </li>
+
+        <li>
+          <a href="servicos.html">Serviços</a>
+        </li>
+
+        <li>
+          <a href="planos.html">Planos</a>
+        </li>
+
+        <li>
+          <a href="contato.html" class="active">Contato</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button class="menu-toggle" onclick="toggleMenu()">
+      ☰
+    </button>
+
+    <a class="join-btn" href="login.html">
+      Entrar
+    </a>
+
+  </header>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+  <section class="contact-hero">
+
+    <div class="contact-hero-content">
+
+      <span>Fale com a gente</span>
+
+      <h1>
+        Pronta para começar sua <strong>evolução?</strong>
+      </h1>
+
+      <p>
+        Tire suas dúvidas, conheça nossos planos ou fale com a equipe MyGym.
+        Estamos aqui para te ajudar a dar o próximo passo.
+      </p>
+
+      <div class="contact-hero-buttons">
+        <a href="#contact-form-section" class="start-btn">
+          Enviar Mensagem
+        </a>
+
+        <a href="#contact-info" class="outline-btn">
+          Ver Informações
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       INFORMAÇÕES DE CONTATO
+  ========================== -->
+  <section id="contact-info" class="contact-info-section">
+
+    <div class="section-header">
+
+      <span class="section-tag">Atendimento</span>
+
+      <h2>Entre em contato com a MyGym</h2>
+
+      <p>
+        Escolha o melhor canal para falar com a gente. Nossa equipe pode te ajudar
+        com planos, horários, modalidades e matrícula.
+      </p>
+
+    </div>
+
+    <div class="contact-info-grid">
+
+      <div class="contact-info-card">
+        <i class="fa-solid fa-phone"></i>
+
+        <h3>Telefone</h3>
+
+        <p>
+          Fale diretamente com nossa equipe de atendimento.
+        </p>
+
+        <a href="tel:+5521999999999">
+          (21) 99999-9999
+        </a>
+      </div>
+
+      <div class="contact-info-card">
+        <i class="fa-brands fa-whatsapp"></i>
+
+        <h3>WhatsApp</h3>
+
+        <p>
+          Tire dúvidas rápidas sobre planos, horários e serviços.
+        </p>
+
+        <a href="https://wa.me/5521999999999" target="_blank" rel="noopener noreferrer">
+          Chamar no WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-info-card">
+        <i class="fa-solid fa-envelope"></i>
+
+        <h3>Email</h3>
+
+        <p>
+          Envie sua mensagem e retornaremos o quanto antes.
+        </p>
+
+        <a href="mailto:contato@mygym.com">
+          contato@mygym.com
+        </a>
+      </div>
+
+      <div class="contact-info-card">
+        <i class="fa-solid fa-location-dot"></i>
+
+        <h3>Endereço</h3>
+
+        <p>
+          Venha conhecer nossa estrutura pessoalmente.
+        </p>
+
+        <a href="#location-section">
+          Ver localização
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FORMULÁRIO
+  ========================== -->
+  <section id="contact-form-section" class="contact-form-section">
+
+    <div class="contact-layout">
+
+      <div class="contact-text">
+
+        <span class="section-tag">Mensagem</span>
+
+        <h2>Envie sua dúvida</h2>
+
+        <p>
+          Preencha o formulário e nossa equipe entrará em contato para te ajudar
+          com informações sobre planos, serviços, horários ou matrícula.
+        </p>
+
+        <div class="contact-highlights">
+
+          <div>
+            <i class="fa-solid fa-check"></i>
+            <span>Resposta rápida</span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-check"></i>
+            <span>Atendimento personalizado</span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-check"></i>
+            <span>Ajuda para escolher o melhor plano</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <form class="contact-form contact-form-large" onsubmit="enviarFormulario(event)">
+
+        <div class="input-group">
+          <label for="nome">Nome</label>
+          <input id="nome" type="text" placeholder="Digite seu nome" required>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Digite seu email" required>
+        </div>
+
+        <div class="input-group">
+          <label for="telefone">Telefone</label>
+          <input id="telefone" type="tel" placeholder="Digite seu telefone">
+        </div>
+
+        <div class="input-group">
+          <label for="assunto">Assunto</label>
+
+          <select id="assunto" required>
+            <option value="">Selecione uma opção</option>
+            <option value="planos">Quero saber sobre planos</option>
+            <option value="servicos">Quero saber sobre serviços</option>
+            <option value="matricula">Quero fazer matrícula</option>
+            <option value="outro">Outro assunto</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="mensagem">Mensagem</label>
+
+          <textarea
+            id="mensagem"
+            placeholder="Escreva sua mensagem"
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit">
+          Enviar Mensagem
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       LOCALIZAÇÃO
+  ========================== -->
+  <section id="location-section" class="location-section">
+
+    <div class="section-header">
+
+      <span class="section-tag">Localização</span>
+
+      <h2>Venha treinar com a gente</h2>
+
+      <p>
+        Nossa academia foi pensada para oferecer praticidade, conforto e uma
+        experiência completa para sua rotina de treino.
+      </p>
+
+    </div>
+
+    <div class="location-grid">
+
+      <div class="location-card">
+
+        <i class="fa-solid fa-map-location-dot"></i>
+
+        <h3>Endereço</h3>
+
+        <p>
+          Rua Exemplo, 123<br>
+          Centro - Rio de Janeiro, RJ
+        </p>
+
+        <a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">
+          Abrir no mapa
+        </a>
+
+      </div>
+
+      <div class="location-card">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <h3>Horário de funcionamento</h3>
+
+        <ul>
+          <li>Segunda a sexta: 06h às 23h</li>
+          <li>Sábado: 08h às 18h</li>
+          <li>Domingo: 08h às 14h</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FAQ
+  ========================== -->
+  <section class="contact-faq">
+
+    <div class="section-header">
+
+      <span class="section-tag">Dúvidas frequentes</span>
+
+      <h2>Antes de falar com a gente</h2>
+
+      <p>
+        Algumas respostas rápidas para facilitar seu contato.
+      </p>
+
+    </div>
+
+    <div class="faq-container">
+
+      <div class="faq-item">
+        <h3>Posso visitar a academia antes de fechar um plano?</h3>
+        <p>
+          Sim. Você pode entrar em contato para conhecer a estrutura e tirar suas
+          dúvidas antes de escolher um plano.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Consigo tirar dúvidas pelo WhatsApp?</h3>
+        <p>
+          Sim. O WhatsApp é uma das formas mais rápidas de falar com nossa equipe.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Vocês ajudam a escolher o melhor plano?</h3>
+        <p>
+          Sim. Nossa equipe pode te orientar de acordo com sua rotina, objetivo e
+          modalidades de interesse.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Posso fazer matrícula online?</h3>
+        <p>
+          Você pode iniciar o contato pelo site e finalizar com a equipe da MyGym.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       CTA FINAL
+  ========================== -->
+  <section class="contact-final-cta">
+
+    <div class="final-cta-content">
+
+      <span>Fale com a MyGym</span>
+
+      <h2>Seu próximo treino pode começar com uma mensagem.</h2>
+
+      <p>
+        Entre em contato, escolha seu plano e venha transformar sua rotina com a gente.
+      </p>
+
+      <a href="#contact-form-section" class="services-btn">
+        Enviar Mensagem
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+  <footer class="footer">
+
+    <div class="footer-logo">
+      <h2>My<span>Gym</span></h2>
+      <p>Transforme seu corpo. Evolua sua rotina.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="contato.html">Contato</a>
+    </div>
+
+    <p class="footer-copy">
+      © 2026 MyGym. Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
